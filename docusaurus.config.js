@@ -84,7 +84,7 @@ const config = {
                         items: [
                             {
                                 label: 'Tutorial',
-                                to: '/docs/intro',
+                                to: '/docs/get-started',
                             },
                         ],
                     },
@@ -104,20 +104,7 @@ const config = {
                                 href: 'https://twitter.com/docusaurus',
                             },
                         ],
-                    },
-                    {
-                        title: 'More',
-                        items: [
-                            {
-                                label: 'Blog',
-                                to: '/blog',
-                            },
-                            {
-                                label: 'GitHub',
-                                href: 'https://github.com/facebook/docusaurus',
-                            },
-                        ],
-                    },
+                    }
                 ],
                 copyright: `Copyright © ${new Date().getFullYear()} Edmand46.`,
             },

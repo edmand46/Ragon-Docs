@@ -6,6 +6,19 @@ sidebar_position: 6
 
 You can subscribe on global events, broadcasted on whole room.
 
+
+:::tip My tip
+
+Use this awesome feature option
+
+:::
+
+:::danger Take care
+
+This action is dangerous
+
+:::
+
 ```
 public class DamageEvent : IRagonSerializable
   {
