@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Player
+# Ragon Manager
 
-Player is connected and authorized connection, and also contains in one rooms on server, he doesn't have state, only 
+Each entity can subscribe on events, and also invokes events on entities;
 
 ## How to subscribe on event
 

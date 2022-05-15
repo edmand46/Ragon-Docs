@@ -1,14 +1,13 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
-# Entity State
+# Ragon Entity
 
-Each entity has a state that will be updated frequently, you need to write data to it that should be updated frequently and their loss will not be critical
+Each entity can subscribe on events, and also invokes events on entities;
 
-## How to create state
+## How to subscribe on event
 
-Each state is implementing interface `IRagonSerializable`, more info in [Serialization](/)
 
 Let's create for our first entity state:
 

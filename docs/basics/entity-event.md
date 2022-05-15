@@ -12,18 +12,18 @@ Each entity can subscribe on events, and also invokes events on entities;
 Let's create for our first entity state:
 
 ```cs title="Assets/EntityState.cs"
-public class EntityState: IRagonSerializable
-{
-    public int Health;
-    
+public class DamageEvent : IRagonSerializable
+  {
+    public int Value;
+
     public void Serialize(BitBuffer buffer)
     {
-      buffer.AddInt(Health);
+      buffer.AddInt(Value);
     }
 
     public void Deserialize(BitBuffer buffer)
     {
-      Health = buffer.ReadInt();
+      Value = buffer.ReadInt();
     }
-}
+  }
 ```

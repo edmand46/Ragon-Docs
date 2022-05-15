@@ -21,3 +21,21 @@
   align-items: center;
   justify-content: center;
 }
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.logo_block {
+  position: relative;
+  padding-left: 15px;
+  top: 50%;
+  display: inline-flex;
+}
+
+.logo_text {
+  font-size: 4rem;
+  line-height: 1.5;
+  padding-left: 10px;
+}

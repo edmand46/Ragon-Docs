@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Room
+# Ragon Network
 
 Each entity can subscribe on events, and also invokes events on entities;
 
