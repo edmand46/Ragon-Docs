@@ -62,7 +62,7 @@ const FeatureList = [
     icon: '&#xf12e;',
     description: (
         <>
-          You can add server side logic and intercept messages from the client using room plugins, as well as customize authorization.
+          You can add server side logic and intercept events from the client using room plugins, as well as customize authorization.
         </>
     ),
   },
