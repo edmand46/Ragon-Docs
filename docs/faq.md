@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 6
 ---
 
-# Get started
+# FAQ
 
 Ragon consists of two components that we will need to get started, they are Simple Server and Unity SDK.
 
@@ -28,7 +28,6 @@ and past next:
 https://github.com/edmand46/Ragon-Unity-SDK.git
 ```
 
-
 ### Let's begin
-
-Let begin!
+- With build in Manager
+- With custom Manager

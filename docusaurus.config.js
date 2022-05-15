@@ -65,15 +65,10 @@ const config = {
                 items: [
                     {
                         type: 'doc',
-                        docId: 'intro',
+                        docId: 'get-started',
                         position: 'left',
                         label: 'Documentation',
                     },
-                    // {
-                    //     to: '/blog',
-                    //     label: 'Changelog',
-                    //     position: 'left'
-                    // },
                     {
                         href: 'https://github.com/facebook/docusaurus',
                         label: 'GitHub',
