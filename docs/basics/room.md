@@ -3,27 +3,8 @@ sidebar_position: 1
 ---
 
 # Room
+#### Description
+Room contains inside entities, players, and events, and attached plugin;
 
-Each entity can subscribe on events, and also invokes events on entities;
-
-## How to subscribe on event
-
-
-Let's create for our first entity state:
-
-```cs title="Assets/EntityState.cs"
-public class EntityState: IRagonSerializable
-{
-    public int Health;
-    
-    public void Serialize(BitBuffer buffer)
-    {
-      buffer.AddInt(Health);
-    }
-
-    public void Deserialize(BitBuffer buffer)
-    {
-      Health = buffer.ReadInt();
-    }
-}
-```
+#### Room structure
+![img.png](img/room.png)

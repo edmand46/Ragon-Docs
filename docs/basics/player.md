@@ -4,26 +4,15 @@ sidebar_position: 2
 
 # Player
 
-Player is connected and authorized connection, and also contains in one rooms on server, he doesn't have state, only 
+Player is small structure which represent connected player and joined to room
 
-## How to subscribe on event
+:::tip Tip
 
+Player itself has no state.
 
-Let's create for our first entity state:
+:::
 
-```cs title="Assets/EntityState.cs"
-public class EntityState: IRagonSerializable
-{
-    public int Health;
-    
-    public void Serialize(BitBuffer buffer)
-    {
-      buffer.AddInt(Health);
-    }
+Player contains only name and array of entities which he has own;
 
-    public void Deserialize(BitBuffer buffer)
-    {
-      Health = buffer.ReadInt();
-    }
-}
-```
+#### Player structure
+![img.png](img/player.png)
