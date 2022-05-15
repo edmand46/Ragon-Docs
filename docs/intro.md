@@ -2,46 +2,33 @@
 sidebar_position: 1
 ---
 
-# Intro
+# Get started
 
-Let's discover **Ragon server**.
+Ragon consists of two components that we will need to get started, they are Simple Server and Unity SDK.
 
-## Getting Started
+- Simple Server is a built-in binary server with no additional extensions, the easiest way to get started with Ragon
 
-Get started by **creating a new site**.
+- Unity SDK is an SDK containing api for working with the server, at the moment there is a high-level api (still in development) and a low-level one that will allow you to build a more optimal solution for your game
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### Ragon Simple Server
+Simple server can be downloaded from releases from github:
+- [Download](https://github.com/edmand46/Ragon/releases)
 
-### What you'll need
 
-- [Node.js](https://nodejs.org/en/download/) version 14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### Ragon Unity SDK
+ For installing Ragon Unity SDK, we will use Unity Package Manager
 
-## Generate a new site
+Open Unity Package Manager, press "+", press on "Add package from git URL" 
 
-Generate a new Docusaurus site using the **classic template**.
+![img.png](img/upm_git_url.png)
 
-The classic template will automatically be added to your project after you run the command:
+and past next:
 
-```bash
-npm init docusaurus@latest my-website classic
+```
+https://github.com/edmand46/Ragon-Unity-SDK.git
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### Let's begin
 
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Let begin!
