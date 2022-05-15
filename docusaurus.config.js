@@ -70,9 +70,15 @@ const config = {
                         label: 'Documentation',
                     },
                     {
-                        href: 'https://github.com/facebook/docusaurus',
+                        href: 'https://github.com/edmand46/Ragon',
                         label: 'GitHub',
                         position: 'right',
+                    },
+                    {
+                        label: 'Discord',
+                        href: 'https://discord.gg/MqRPZxFhXc',
+                        position: 'right',
+
                     },
                 ],
             },
@@ -91,18 +97,18 @@ const config = {
                     {
                         title: 'Community',
                         items: [
-                            {
-                                label: 'Stack Overflow',
-                                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                            },
+                            // {
+                            //     label: 'Stack Overflow',
+                            //     href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                            // },
                             {
                                 label: 'Discord',
-                                href: 'https://discordapp.com/invite/docusaurus',
+                                href: 'https://discord.gg/MqRPZxFhXc',
                             },
-                            {
-                                label: 'Twitter',
-                                href: 'https://twitter.com/docusaurus',
-                            },
+                            // {
+                            //     label: 'Twitter',
+                            //     href: 'https://twitter.com/docusaurus',
+                            // },
                         ],
                     }
                 ],
