@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'Ragon',
-    tagline: 'Ragon simple game server',
+    tagline: 'Ragon network solution',
     url: 'https://ragon-server.com',
     baseUrl: '/',
     onBrokenLinks: 'throw',
@@ -60,7 +60,7 @@ const config = {
                 title: 'Ragon',
                 logo: {
                     alt: 'Ragon server logo',
-                    src: 'img/ragon-logo.png',
+                    src: 'img/ragon-logo.svg',
                 },
                 items: [
                     {
@@ -69,7 +69,11 @@ const config = {
                         position: 'left',
                         label: 'Documentation',
                     },
-                    { to: '/blog', label: 'Changelog', position: 'left' },
+                    // {
+                    //     to: '/blog',
+                    //     label: 'Changelog',
+                    //     position: 'left'
+                    // },
                     {
                         href: 'https://github.com/facebook/docusaurus',
                         label: 'GitHub',
@@ -120,7 +124,7 @@ const config = {
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} Edmand46.`,
             },
             prism: {
                 theme: lightCodeTheme,
