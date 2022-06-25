@@ -8,7 +8,7 @@ const FeatureList = [
     icon: '&#xf135;',
     description: (
         <>
-          You can use built in components for prototyping your game, or build your own solution, solid and optimized for your game.
+            Simple and small, download and start create multiplayer!
         </>
     ),
   },
@@ -35,7 +35,7 @@ const FeatureList = [
     icon: '&#xf3fd;',
     description: (
         <>
-          Multi-threaded server with small logic core and a balancing system between threads
+          High-performance server on native sockets via ENet-Sharp battle tested socket library
         </>
     ),
   },
@@ -53,7 +53,7 @@ const FeatureList = [
     icon: '&#xf11b;',
     description: (
         <>
-          Ragon has Unity SDK.
+          Ragon has Unity SDK. You can use built in components for prototyping your game, or build your own solution, solid and optimized for your game.
         </>
     ),
   },

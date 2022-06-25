@@ -6,7 +6,7 @@ sidebar_position: 1
 
 Ragon consists of two components that we will need to get started, they are Simple Server and Unity SDK.
 
-- Simple Server is a built-in binary server with no additional extensions, the easiest way to get started with Ragon
+- Simple Server is a built-in binary server without plugins, the easiest way to get started with Ragon
 
 - Unity SDK is an SDK containing api for working with the server, at the moment there is a high-level api (still in development) and a low-level one that will allow you to build a more optimal solution for your game
 
