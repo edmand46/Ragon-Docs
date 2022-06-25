@@ -1,8 +1,8 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# Extends server with plugin
+# Plugins
 
 :::danger Take care
 
