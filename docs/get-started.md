@@ -11,9 +11,6 @@ Simple server can be downloaded from releases from github:
 ### Ragon Unity SDK
 
 ### Installing
-
-After project creation add Ragon Unity SDK package
-
 Open Unity Package Manager, press "+", press on "Add package from git URL"
 
 ![img.png](img/upm_git_url.png)

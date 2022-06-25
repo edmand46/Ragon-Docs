@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 
 # First Steps
-After you installed Unity SDK, and downloaded ragon simple server, let's begin
+After you installed Unity SDK, and downloaded **Ragon Simple Server**, let's begin
 
 ### Server
 For first start our server, unzip and launch executable depends from your OS: 
@@ -14,7 +14,7 @@ For first start our server, unzip and launch executable depends from your OS:
 ### Unity Client
 ### Setup scene
 
-Create emtpy game object with name for example ``Network``, add next components:
+Create empty game object with name for example ``Network``, add next components:
 - Ragon Network
 - Ragon Entity Manager
 
