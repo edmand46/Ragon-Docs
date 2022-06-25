@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# First Steps
+# Setup
 After you installed Unity SDK, and downloaded **Ragon Simple Server**, let's begin
 
 ### Server
@@ -12,6 +12,7 @@ For first start our server, unzip and launch executable depends from your OS:
 - For Linux **Ragon.SimpleServer**
 
 ### Unity Client
+
 ### Setup scene
 
 Create empty game object with name for example ``Network``, add next components:
