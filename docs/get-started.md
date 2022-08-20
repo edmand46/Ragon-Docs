@@ -10,21 +10,12 @@ Simple server can be downloaded from releases from github:
 
 ### Ragon Unity SDK
 
-### Installing
 Open Unity Package Manager, press "+", press on "Add package from git URL"
 
 ![img.png](img/upm_git_url.png)
 
-and past next:
+and past next line:
 
 ```
 https://github.com/edmand46/Ragon-Unity-SDK.git
 ```
-
-### Usage
-Ragon Unity SDK has two different api levels
-
-- Easy using via prototyping Components :
-- Advanced using via custom build components;
-
-In next tutorial we will use prototyping components
