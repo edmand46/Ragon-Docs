@@ -132,7 +132,7 @@ Last step, we should tell server what ready to receive updates for this map:
 
 Now drag and drop GameManager on GameObject on scene:
 
-![img.png](img/ragon-manager.png)
+![img.png](/img/ragon-manager.png)
 
 And press Play, after you should see next logs
 

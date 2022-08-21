@@ -12,7 +12,7 @@ Simple server can be downloaded from releases from github:
 
 Open Unity Package Manager, press "+", press on "Add package from git URL"
 
-![img.png](img/upm_git_url.png)
+![img.png](/img/upm_git_url.png)
 
 and past next line:
 
