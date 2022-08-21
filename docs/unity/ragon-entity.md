@@ -1,29 +1,9 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 ---
 
 # Ragon Entity
 
-Each entity can subscribe on events, and also invokes events on entities;
+Basic component for all networked gameobjects
 
-## How to subscribe on event
-
-
-Let's create for our first entity state:
-
-```cs title="Assets/EntityState.cs"
-public class EntityState: IRagonSerializable
-{
-    public int Health;
-    
-    public void Serialize(BitBuffer buffer)
-    {
-      buffer.AddInt(Health);
-    }
-
-    public void Deserialize(BitBuffer buffer)
-    {
-      Health = buffer.ReadInt();
-    }
-}
-```
+![img.png](/img/ragon-entity.png)
