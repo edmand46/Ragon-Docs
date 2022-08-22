@@ -4,41 +4,103 @@ sidebar_position: 3
 
 # Ragon Behaviour
 
-MonoBehaviour with additional callbacks, methods, and user defined properties by Ragon
+MonoBehaviour with additional callbacks, methods, and user defined properties via [Ragon Properties](/docs/unity/ragon-property.md);
 
-Ragon has builtin properties:
+### OnCreatedEntity
 
-- RagonInt
-- RagonVector3
-- RagonString
-- RagonBool
-- RagonFloat
+Called then object created and attached to network, there you can write your logic and also get spawn payload
+```cs
+public override void OnCreatedEntity()
+{
+    var characterPayload = Entity.GetSpawnPayload<CharacterPayload>(); 
+    _name.Value = characterPayload.Name;    
+}
+```
+
+### OnDestroyedEntity
+
+Called then object will destoyed and detached to network, there you can write your logic and also get destroy payload
+```cs
+public override void OnCreatedEntity()
+{
+    var characterPayload = Entity.GetDestroyPayload<CharacterPayload>(); 
+    _name.Value = characterPayload.Name;    
+}
+```
+
+### OnEntityTick
+
+Called only for owner of object, so there are you can write logic for controlling state and game object
+```cs
+public override void OnEntityTick()
+{
+   var direction = Vector3.zero;
+
+   if (Input.GetKey(KeyCode.A))
+   {
+      direction += transform.right * 10 * Time.deltaTime;
+   }
+   else if (Input.GetKey(KeyCode.D))
+   {
+      direction -= transform.right * 10 * Time.deltaTime;
+   }
+  
+   _position.Value = transform.position;
+     
+   transform.position += direction;
+}
+```
+
+### OnProxyTick
+
+Called only for non owner of object, so there are you can write visual logic like interpolation of object
+
+Simple Interpolation:
+```cs
+public override void OnProxyTick()
+{
+   transform.position = Vector3.Lerp(transform.position, _position.Value, Time.deltaTime * 5);
+}
+```
 
 ### Example
-```
-  public class Player : RagonBehaviour
+```cs showLineNumbers
+public class Player : RagonBehaviour
+{
+  [SerializeField] private RagonString _name = new RagonString("");
+  [SerializeField] private RagonFloat _health = new RagonFloat(0.0f);
+  [SerializeField] private RagonVector3 _position = new(Vector3.zero, RagonAxis.XZ);
+  
+  public override void OnCreatedEntity()
   {
-    [SerializeField] private RagonString _name = new RagonString("");
-    [SerializeField] private RagonFloat _health = new RagonFloat(0.0f);
-    [SerializeField] private RagonVector3 _position = new(Vector3.zero, RagonAxis.XZ);
-    
-    public override void OnCreatedEntity()
-    {
-    }
-
-    public override void OnDestroyedEntity()
-    {
-      
-    }
-
-    public override void OnEntityTick()
-    {
-      
-    }
-
-    public override void OnProxyTick()
-    {
-      
-    }
   }
+
+  public override void OnDestroyedEntity()
+  {
+    
+  }
+
+  public override void OnEntityTick()
+  {
+     var direction = Vector3.zero;
+  
+     if (Input.GetKey(KeyCode.A))
+     {
+        direction += transform.right * 10 * Time.deltaTime;
+     }
+     else if (Input.GetKey(KeyCode.D))
+     {
+        direction -= transform.right * 10 * Time.deltaTime;
+     }
+      
+     _position.Value = transform.position;
+       
+     transform.position += direction;
+  }
+
+  public override void OnProxyTick()
+  {
+     transform.position = Vector3.Lerp(transform.position, _position.Value, Time.deltaTime * 5);
+  }
+}
 ```
