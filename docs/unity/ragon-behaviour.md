@@ -86,16 +86,16 @@ public class Player : RagonBehaviour
   
      if (Input.GetKey(KeyCode.A))
      {
-        direction += transform.right * 10 * Time.deltaTime;
+        direction += transform.right;
      }
      else if (Input.GetKey(KeyCode.D))
      {
-        direction -= transform.right * 10 * Time.deltaTime;
+        direction -= transform.right;
      }
       
+     transform.position += direction  * 10 * Time.deltaTime;
+     
      _position.Value = transform.position;
-       
-     transform.position += direction;
   }
 
   public override void OnProxyTick()
