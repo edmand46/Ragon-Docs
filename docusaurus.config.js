@@ -13,24 +13,15 @@ const config = {
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
-
-    // GitHub pages deployment config.
-    // If you aren't using GitHub pages, you don't need these.
     organizationName: '@edmand46', // Usually your GitHub org/user name.
     projectName: 'Ragon', // Usually your repo name.
-
-    // Even if you don't use internalization, you can use this field to set useful
-    // metadata like html lang. For example, if your site is Chinese, you may want
-    // to replace "en" with "zh-Hans".
     i18n: {
         defaultLocale: 'en',
         locales: ['en'],
     },
-    stylesheets: [
-        {
-            href: "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
-        }
-    ],
+    stylesheets: [{
+        href: "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    }],
     presets: [
         [
             'classic',
@@ -38,17 +29,11 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 blog: {
                     showReadingTime: true,
-                    // Please change this to your repo.
-                    // Remove this to remove the "edit this page" links.
-                    editUrl:
-                        'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+                    editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
                 },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
@@ -72,6 +57,11 @@ const config = {
                         docId: 'get-started',
                         position: 'left',
                         label: 'Documentation',
+                    },
+                    {
+                        href: 'https://cloud.ragon-server.com',
+                        label: 'Ragon Cloud',
+                        position: 'right',
                     },
                     {
                         href: 'https://github.com/edmand46/Ragon',
@@ -99,6 +89,15 @@ const config = {
                         ],
                     },
                     {
+                        title: 'Ragon Cloud',
+                        items: [
+                            {
+                                label: 'Tutorial',
+                                to: 'https://cloud.ragon-server.com',
+                            },
+                        ],
+                    },
+                    {
                         title: 'Community',
                         items: [
                             // {
@@ -116,7 +115,7 @@ const config = {
                         ],
                     }
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} Edmand46.`,
+                copyright: `Copyright © ${new Date().getFullYear()} Eduard Kargin (Edmand46).`,
             },
             prism: {
                 theme: lightCodeTheme,
