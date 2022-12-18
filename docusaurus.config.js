@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'Ragon',
-    tagline: 'Ragon network solution',
+    tagline: 'Simple network solution for Unity',
     url: 'https://ragon-server.com',
     baseUrl: '/',
     markdown: {

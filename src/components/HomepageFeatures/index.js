@@ -8,16 +8,7 @@ const FeatureList = [
         icon: '&#xf135;',
         description: (
             <>
-                Simple and small, download and start create multiplayer!
-            </>
-        ),
-    },
-    {
-        title: 'Architecture',
-        icon: '&#xf233;',
-        description: (
-            <>
-                Room based architecture with matchmaking allows, you to forget about scaling, it just works.
+                Simple and small, download and start create your dream game!
             </>
         ),
     },
@@ -31,11 +22,29 @@ const FeatureList = [
         ),
     },
     {
-        title: 'Perfomance',
-        icon: '&#xf3fd;',
+        title: 'Architecture',
+        icon: '&#xf233;',
         description: (
             <>
-                High-performance server on native sockets via ENet-Sharp battle tested socket library
+                Room based architecture with matchmaking allows, you to forget about scaling, it just works.
+            </>
+        ),
+    },
+    {
+        title: 'Matchmaking',
+        icon: '&#xf11b;',
+        description: (
+            <>
+               Builtin Matchmaking! Basic and very simple!
+            </>
+        ),
+    },
+    {
+        title: 'Perfomance',
+        icon: '&#xf0e7;',
+        description: (
+            <>
+                High-performance server on native sockets via ENet-Sharp battle tested socket library.
             </>
         ),
     },
@@ -44,7 +53,7 @@ const FeatureList = [
         icon: '&#xf3fd;',
         description: (
             <>
-                Works on new .NET 6 and 7 perfomance and solid platform from Microsoft
+                Runs on the new .NET performance and robust platform from Microsoft
             </>
         ),
     },
@@ -59,22 +68,20 @@ const FeatureList = [
         ),
     },
     {
-        title: 'Unity Integration',
-        icon: '&#xf11b;',
-        description: (
-            <>
-                Ragon has Unity SDK. You can use built in components for prototyping your game, or build your own
-                solution, solid and optimized for your game.
-            </>
-        ),
-    },
-    {
         title: 'Plugins',
         icon: '&#xf12e;',
         description: (
             <>
-                You can add server side logic and intercept events from the client using room plugins, as well as
-                customize authorization.
+                Coming soon...
+            </>
+        ),
+    },
+    {
+        title: 'Custom matchmaking',
+        icon: '&#xf12e;',
+        description: (
+            <>
+                Coming soon...
             </>
         ),
     },
