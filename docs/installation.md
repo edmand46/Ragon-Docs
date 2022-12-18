@@ -193,7 +193,7 @@ public class GameManager : MonoBehaviour, IRagonListener
   {
     Debug.Log("Authorizing...");
     var randomName = $"Player {Random.Range(100, 999)}";
-    RagonNetwork.Session.AuthorizeWithKey("defaultkey", randomName,Array.Empty<byte>());
+    RagonNetwork.Session.AuthorizeWithKey("defaultkey", randomName, Array.Empty<byte>());
   }
     
   public void OnAuthorized(string playerId, string playerName)
@@ -235,11 +235,6 @@ public class GameManager : MonoBehaviour, IRagonListener
   public void OnOwnerShipChanged(RagonPlayer player)
   {
     Debug.Log("New room owner " + player.Name);
-  }
-
-  public void OnEvent(RagonPlayer player, ushort evntCode, RagonSerializer payload)
-  {
-    Debug.Log("Event " + evntCode);
   }
 
   public void OnLevel(string sceneName)

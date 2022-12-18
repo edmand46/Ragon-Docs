@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Ragon Behaviour
 
-MonoBehaviour with additional callbacks, methods, and network state via [Ragon Properties](/docs/unity/ragon-property.md);
+Inherited from MonoBehaviour class with additional callbacks, methods, and network state via [Ragon Properties](/docs/unity/ragon-property.md).
 
 ### OnCreatedEntity
 

@@ -6,17 +6,13 @@ sidebar_position: 0
 
 For listening network events such as player connections, leave, etc, you should implement IRagonEventListener interface
 
-#### Example:
+#### Example setup:
 ```cs showLineNumbers
-[RequireComponent(typeof(RagonEntityManager))]
-public class GameManager : MonoBehaviour, IRagonListener
+public class GameNetwork : MonoBehaviour, IRagonListener
 {
    private void Start()
    {
-       var entityManager = GetComponent<RagonEntityManager>(); 
        RagonNetwork.AddListener(this);
-       RagonNetwork.SetManager(entityManager);
-  
        RagonNetwork.Connect("127.0.0.1", 4444);   
    }
 }
@@ -70,7 +66,7 @@ public void OnLeaved()
   Debug.Log("Leaved");
 }
 ```
-
+Another player joined to current room
 ```cs showLineNumbers
 public void OnPlayerJoined(RagonPlayer player)
 {
@@ -78,6 +74,7 @@ public void OnPlayerJoined(RagonPlayer player)
 }
 ```
 
+Another player left to current room
 ```cs showLineNumbers
 public void OnPlayerLeft(RagonPlayer player)
 {
@@ -85,6 +82,7 @@ public void OnPlayerLeft(RagonPlayer player)
 }
 ```
 
+New player become owner of room
 ```cs showLineNumbers
 public void OnOwnerShipChanged(RagonPlayer player)
 {
