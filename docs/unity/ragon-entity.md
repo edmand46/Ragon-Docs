@@ -3,8 +3,16 @@ sidebar_position: 1
 ---
 
 # Ragon Entity
-
+### Description 
 Basic component for all game objects, responsible for state and event replication.
+
+Ragon Entity can be two types:
+* Dynamic - Created in realtime during game
+* Static - Placed on scene before game
+
+:::tip
+If current **Owner** of room left, owning of static entities will be transfered to next **Owner** of room.
+:::
 
 ### Options
 - Authority:
@@ -18,34 +26,5 @@ Basic component for all game objects, responsible for state and event replicatio
     * **Checked** - Destroy object on destroying entity
     * **Unchecked** - Keep object on destroying entity
 
-![img.png](/img/ragon-entity.png)
-
-### Lifecycle
-
-```cs showLineNumbers
-public override void OnCreatedEntity()
-{
-   // Do your stuff
-}
-```
-
-```cs showLineNumbers
-public virtual void OnDestroyedEntity()
-{
-  // Do your stuff
-}
-```
-
-```cs showLineNumbers
-public virtual void OnEntityTick()
-{
-  // Do your stuff
-}
-```
-
-```cs showLineNumbers
-public virtual void OnProxyTick()
-{ 
-  // Do your stuff
-}
-```
+### Ragon Entity Component in Unity Inspector 
+![img.png](/images/ragon-entity-overview.png)
