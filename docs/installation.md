@@ -2,9 +2,9 @@
 sidebar_position: 2
 ---
 
-# Basic setup
+# Installation
 
-### Ragon.Relay
+### Ragon Relay Server
 
 Small server which will process all replication of states, matchmaking, etc
 
@@ -173,7 +173,7 @@ And press Play, after you should see next logs
 
 ![network-logs](/img/network-logs.png)
 
-Success! You connected to **Ragon Simple Server** and authorized!
+Success! You connected to **Ragon Relay Server** and authorized!
 
 #### Completed sources:
 ```cs showLineNumbers

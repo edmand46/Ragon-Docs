@@ -1,12 +1,12 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Ragon Entity
 
-Basic required component for all networked gameobjects, contains type of entity, id, and other ragon network information
+Basic component for all game objects, responsible for state and event replication.
 
-Entity options:
+### Options
 - Authority:
     * **None** - Non anyone can send event on this entity
     * **All** - All can send events to this entity
@@ -19,3 +19,33 @@ Entity options:
     * **Unchecked** - Keep object on destroying entity
 
 ![img.png](/img/ragon-entity.png)
+
+### Lifecycle
+
+```cs showLineNumbers
+public override void OnCreatedEntity()
+{
+   // Do your stuff
+}
+```
+
+```cs showLineNumbers
+public virtual void OnDestroyedEntity()
+{
+  // Do your stuff
+}
+```
+
+```cs showLineNumbers
+public virtual void OnEntityTick()
+{
+  // Do your stuff
+}
+```
+
+```cs showLineNumbers
+public virtual void OnProxyTick()
+{ 
+  // Do your stuff
+}
+```

@@ -10,6 +10,10 @@ const config = {
     tagline: 'Ragon network solution',
     url: 'https://ragon-server.com',
     baseUrl: '/',
+    markdown: {
+        mermaid: true,
+    },
+    themes: ['@docusaurus/theme-mermaid'],
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
@@ -58,7 +62,7 @@ const config = {
                 items: [
                     {
                         type: 'doc',
-                        docId: 'basic-setup',
+                        docId: 'installation',
                         position: 'left',
                         label: 'Documentation',
                     },
