@@ -4,15 +4,50 @@ sidebar_position: 2
 
 # Basic setup
 
-After you installed Unity SDK, and downloaded **Ragon Simple Server**, let's begin
+### Ragon.Relay
 
-### Ragon Server
+Small server which will process all replication of states, matchmaking, etc
 
-For first start our server, unzip and launch executable depends from your OS:
+Relay can be downloaded from releases from github by link below.
 
-- For MacOS **Ragon.SimpleServer**
-- For Windows **Ragon.SimpleServer.exe**
-- For Linux **Ragon.SimpleServer**
+**Download**:
+- [Releases](https://github.com/edmand46/Ragon/releases)
+
+### Ragon Unity SDK
+
+Client libraries and tools for build multiplayer games on unity engine.
+
+You can install Ragon Unity SDK two ways:
+- Unity Package Manager;
+- *.unitypackage
+
+
+** Unity Package Manager **
+
+Open Unity Package Manager, press "+", press on "Add package from git URL"
+
+![img.png](/img/upm_git_url.png)
+
+and past next line:
+
+```
+https://github.com/edmand46/Ragon-Unity-SDK.git
+```
+
+** Package **
+
+Ragon Unity SDK package can be downloaded from releases from github by link below.
+
+**Download**:
+- [Releases](https://github.com/edmand46/Ragon-Unity-SDK/releases)
+
+### Start server
+
+For first start our server locally, unzip and launch executable depends from your OS:
+
+- For MacOS **Ragon.Relay**
+- For Windows **Ragon.Relay.exe**
+- For Linux **Ragon.Relay**
 
 ### Unity
 

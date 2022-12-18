@@ -1,25 +1,34 @@
 ---
 slug: welcome
-title: Welcome
-authors: [slorber, yangshun]
-tags: [facebook, hello, docusaurus]
+title: Meet the Ragon!
+authors: [ed]
+tags: [ragon]
 ---
 
-[Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
+Motivation
 
-Simply add Markdown files (or folders) to the `blog` directory.
+When I researched the market for available game networking solutions for unity are limited to the following options
 
-Regular blog authors can be added to `authors.yml`.
+Paid closed-loop solutions:
+* Proven
+* Supported
+* Expensive
+* Vendorlock
 
-The blog post date can be extracted from filenames, such as:
+High level open-source free solutions:
+* Free
+* Community
+* Support
+* A lot of headaches with deploying infrastructure in order to release the game
+* High infrastructure costs
 
-- `2019-05-30-welcome.md`
-- `2019-05-30-welcome/index.md`
+Low tier open-source free solutions
+* Free
+* Community
+* Support
+* A lot of headaches with rolling out the infrastructure to release the game
+* Higher demands on developer skills, more effort and money
 
-A blog post folder can be convenient to co-locate blog post images:
+So I wanted a solution that would allow me to develop games quickly and easily, and scale without spending more money and time.
 
-![Docusaurus Plushie](./docusaurus-plushie-banner.jpeg)
-
-The blog supports tags as well!
-
-**And if you don't want a blog**: just delete this directory, and use `blog: false` in your Docusaurus config.
+So this solution - Ragon it's very simple network engine free and opensource, what will be enough for most games, with posibility to extend server logic for what do you want

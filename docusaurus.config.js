@@ -58,15 +58,14 @@ const config = {
                 items: [
                     {
                         type: 'doc',
-                        docId: 'get-started',
+                        docId: 'basic-setup',
                         position: 'left',
                         label: 'Documentation',
                     },
                     {
-                        href: 'https://cloud.ragon-server.com',
-                        label: 'Ragon Cloud',
-                        position: 'right',
-                    },
+                        to: 'blog',
+                        label: 'Blog',
+                        position: 'left'},
                     {
                         href: 'https://github.com/edmand46/Ragon',
                         label: 'GitHub',
