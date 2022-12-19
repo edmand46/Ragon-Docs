@@ -10,14 +10,14 @@ Let's begin!
 
 ### Networked prefab
 
-Every networked object must have **Ragon Entity** component, this component containts information about network state of object do all replication work.
+Every networked object must have a **Ragon Entity** component, this component contains information about the network state of the object do all replication work.
 
 Create **GameObject** named **Player** and add attach **Ragon Entity** component:
 
 ![img.png](/images/create-player-entity.png)
 
 ### Player Behaviour
-Now we should create our own component for controlling and synchronization position and rotation by network for player object:
+Now we should create our component for controlling and synchronization position and rotation by the network for player objects:
 
 ```cs showLineNumbers
 public class Player : RagonBehaviour

@@ -4,13 +4,13 @@ sidebar_position: 3
 
 # Ragon Property
 
-Ragon Property it's small of piece of data replicated by network, you can use builtin properties or build your custom which will fit to your game achitecture
+Ragon Property it's a small of piece of data replicated by a network, you can use built-in properties or build your custom which will fit your game architecture
 
 :::info Take care
 Property by default can change only owner, in future it will configurable
 :::
 
-Ragon has builtin properties:
+Ragon has built-in properties:
 
 - **RagonInt**
 - **RagonVector3**
@@ -18,7 +18,7 @@ Ragon has builtin properties:
 - **RagonBool**
 - **RagonFloat**
 
-** Define property** 
+**Define property** 
 
 You should define inside [RagonBehaviour](/docs/unity/ragon-behaviour)
 
@@ -65,7 +65,7 @@ public class Player : RagonBehaviour
 
 ### Custom property
 
-In this example we create custom property with two float fields, property has two rules:
+In this example we create the custom property with two float fields, property has two rules:
 
 - You should call **MaskAsChanged()** then would like to replicate changes by network
 - Implement serialization methods **Serialize** and **Deserialize**

@@ -23,7 +23,7 @@ More about properties [Ragon Properties](/docs/unity/ragon-property.md).
 
 ### OnCreatedEntity
 
-Called then object created and attached to network, there you can write your logic and also get spawn payload
+Called then the object is created and attached to a network, there you can write your logic and also get spawn payload
 
 ```cs
 public override void OnCreatedEntity()
@@ -35,7 +35,7 @@ public override void OnCreatedEntity()
 
 ### OnDestroyedEntity
 
-Called then object will destoyed and detached to network, there you can write your logic and also get destroy payload
+Called then the object will be destroyed and detached from network, there you can write your logic and also get destroy the payload
 
 ```cs
 public override void OnCreatedEntity()
@@ -47,7 +47,7 @@ public override void OnCreatedEntity()
 
 ### OnEntityTick
 
-Called only for owner of object, so there are you can write logic for controlling state and game object
+Called only for owner of the object, so there are you can write logic for controlling state and game object
 
 ```cs
 public override void OnEntityTick()

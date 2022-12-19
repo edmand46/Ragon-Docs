@@ -34,7 +34,7 @@ export default function Home() {
     return (
         <Layout
             title={`${siteConfig.title}`}
-            description="Ragon network solution for unity">
+            description="Network solution for unity">
             <HomepageHeader/>
             <main>
                 <HomepageFeatures/>

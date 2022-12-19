@@ -43,7 +43,7 @@ public void OnAuthorized(string playerId, string playerName)
 }
 ```
 
-Joined successful joined to room
+Joined successfully to room
 ```cs showLineNumbers
 public void OnJoined()
 {
@@ -51,19 +51,18 @@ public void OnJoined()
 }
 ```
 
-Failed joined to room with error message 
+Failed to join to room with the error message
 ```cs showLineNumbers
 public void OnFailed(string message)
 {
     Debug.LogError("Failed with " + message);
 }
 ```
-
-Leaved successful from current room
+Left successfully from the current room
 ```cs showLineNumbers
-public void OnLeaved()
+public void OnLeft()
 {
-  Debug.Log("Leaved");
+  Debug.Log("Left");
 }
 ```
 Another player joined to current room
@@ -74,7 +73,7 @@ public void OnPlayerJoined(RagonPlayer player)
 }
 ```
 
-Another player left to current room
+Another player left the current room
 ```cs showLineNumbers
 public void OnPlayerLeft(RagonPlayer player)
 {
@@ -90,6 +89,7 @@ public void OnOwnerShipChanged(RagonPlayer player)
 }
 ```
 
+The server requested to load a new map, you should load a new scene and call ```RagonNetwork.Room.SceneLoaded()```
 ```cs showLineNumbers
 public void OnLevel(string sceneName)
 {

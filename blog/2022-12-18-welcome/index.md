@@ -15,20 +15,20 @@ Paid closed-loop solutions:
 * Expensive
 * Vendorlock
 
-High level open-source free solutions:
+High-level open-source free solutions:
 * Free
 * Community
 * Support
-* A lot of headaches with deploying infrastructure in order to release the game
+* A lot of headaches with deploying infrastructure to release the game
 * High infrastructure costs
 
-Low tier open-source free solutions
+Low-tier open-source free solutions
 * Free
 * Community
 * Support
 * A lot of headaches with rolling out the infrastructure to release the game
-* Higher demands on developer skills, more effort and money
+* Higher demands on developer skills, more effort, and money
 
 So I wanted a solution that would allow me to develop games quickly and easily, and scale without spending more money and time.
 
-So this solution - Ragon it's very simple network engine free and opensource, what will be enough for most games, with posibility to extend server logic for what do you want
+So this solution - Ragon it's a very simple network engine free and open source, which will be enough for most games, with the posibility to extend server logic for what you wantNetwork solution for unity

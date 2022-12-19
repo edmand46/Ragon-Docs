@@ -8,7 +8,7 @@ const FeatureList = [
         icon: '&#xf135;',
         description: (
             <>
-                Simple and small, download and start create your dream game!
+                Download and start creating your dream game!
             </>
         ),
     },
@@ -26,7 +26,7 @@ const FeatureList = [
         icon: '&#xf233;',
         description: (
             <>
-                Room based architecture with matchmaking allows, you to forget about scaling, it just works.
+                Room-based architecture with matchmaking allows, you to forget about scaling, it just works.
             </>
         ),
     },
@@ -35,7 +35,7 @@ const FeatureList = [
         icon: '&#xf11b;',
         description: (
             <>
-               Builtin Matchmaking! Basic and very simple!
+               Built-in basic matchmaking!
             </>
         ),
     },
@@ -44,7 +44,7 @@ const FeatureList = [
         icon: '&#xf0e7;',
         description: (
             <>
-                High-performance server on native sockets via ENet-Sharp battle tested socket library.
+                The high-performance server on native sockets via ENet-Sharp battle-tested socket library.
             </>
         ),
     },

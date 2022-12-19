@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'Ragon',
-    tagline: 'Simple network solution for Unity',
+    tagline: 'Network solution for Unity',
     url: 'https://ragon-server.com',
     baseUrl: '/',
     markdown: {
@@ -96,29 +96,12 @@ const config = {
                         ],
                     },
                     {
-                        title: 'Ragon Cloud',
-                        items: [
-                            {
-                                label: 'Tutorial',
-                                to: 'https://cloud.ragon-server.com',
-                            },
-                        ],
-                    },
-                    {
                         title: 'Community',
                         items: [
-                            // {
-                            //     label: 'Stack Overflow',
-                            //     href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                            // },
                             {
                                 label: 'Discord',
                                 href: 'https://discord.gg/MqRPZxFhXc',
                             },
-                            // {
-                            //     label: 'Twitter',
-                            //     href: 'https://twitter.com/docusaurus',
-                            // },
                         ],
                     }
                 ],

@@ -6,18 +6,18 @@ sidebar_position: 2
 
 ### Ragon Relay Server
 
-Small server which will process all replication of states, matchmaking, etc
+A small server that will process all replication of states, matchmaking, etc
 
-Relay can be downloaded from releases from github by link below.
+Relay can be downloaded from releases from Github by the link below.
 
 **Download**:
 - [Releases](https://github.com/edmand46/Ragon/releases)
 
 ### Ragon Unity SDK
 
-Client libraries and tools for build multiplayer games on unity engine.
+Client libraries and tools for building multiplayer games on Unity.
 
-You can install Ragon Unity SDK two ways:
+You can install Ragon Unity SDK in two ways:
 - Unity Package Manager;
 - *.unitypackage
 
@@ -36,14 +36,14 @@ https://github.com/edmand46/Ragon-Unity-SDK.git
 
 ** Package **
 
-Ragon Unity SDK package can be downloaded from releases from github by link below.
+Ragon Unity SDK package can be downloaded from releases from Github by the link below.
 
 **Download**:
 - [Releases](https://github.com/edmand46/Ragon-Unity-SDK/releases)
 
 ### Start server
 
-For first start our server locally, unzip and launch executable depends from your OS:
+First, start our server locally, unzip, and launch the executable depends on your OS:
 
 - For MacOS **Ragon.Relay**
 - For Windows **Ragon.Relay.exe**
@@ -137,7 +137,7 @@ private void Start()
 }
 ```
 
-After we was connected will be called ```OnConnected``` in this place we should request authorization with key and would we like name:
+After we was connected will be called ```OnConnected``` in this place we should request authorization with a key and would we like the name:
 ```cs
 public void OnConnected()
 {
@@ -146,7 +146,7 @@ public void OnConnected()
   RagonNetwork.Session.AuthorizeWithKey("defaultkey", randomName, Array.Empty<byte>());
 }
 ```
-Next step is create or join to room, where specify minimal amount of players, maximum and also map:
+The next step is create or join to room, where specify the minimal amount of players, maximum and also map:
 
 ```cs
 public void OnAuthorized(string playerId, string playerName)
@@ -156,7 +156,7 @@ public void OnAuthorized(string playerId, string playerName)
 }
 ```
 
-Last step, we should tell server what ready to receive updates for this map:
+The last step, we should tell the server what is ready to receive updates for this map:
 ```cs
 public void OnLevel(string sceneName)
 {
@@ -165,7 +165,7 @@ public void OnLevel(string sceneName)
 }
 ```
 
-Now drag and drop GameManager on GameObject on scene:
+Now drag and drop GameManager on GameObject on the scene:
 
 ![img.png](/img/ragon-manager.png)
 
