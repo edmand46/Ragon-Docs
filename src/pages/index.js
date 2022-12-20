@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import HomepageHeader from '@site/src/components/HomepageHeader';
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 const featureList = [
     {
@@ -77,7 +79,7 @@ const featureList = [
         ),
     },
     {
-        title: 'WebSockets',
+        title: 'Matchmaking',
         icon: '&#xf12e;',
         description: (
             <>
@@ -97,7 +99,7 @@ export default function Home() {
             description="Network solution for unity">
             <HomepageHeader/>
             <main>
-                <HomepageFeatures/>
+                <HomepageFeatures features={featureList}/>
             </main>
         </Layout>
     );
