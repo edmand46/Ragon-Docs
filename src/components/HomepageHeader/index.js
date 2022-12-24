@@ -12,7 +12,7 @@ export default function HomepageHeader() {
                 <div className={styles.logo_block}>
                     <img src='img/ragon-logo.png' className={styles.logo}/>
                     <h1 className={styles.logo_text}>{siteConfig.title}</h1>
-                    <p className="hero__subtitle">Beta</p>
+                    <p className="hero__subtitle">Alpha</p>
                 </div>
                 <p className="hero__subtitle">{siteConfig.tagline}</p>
                 <div className={styles.buttons}>
