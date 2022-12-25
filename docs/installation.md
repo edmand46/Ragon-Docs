@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ### Ragon Relay Server
 
-A small server that will process all replication of states, matchmaking, etc
+A small server that will process all replication of states, manage rooms, etc
 
 Relay can be downloaded from releases from Github by the link below.
 

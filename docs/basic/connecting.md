@@ -6,8 +6,8 @@ sidebar_position: 2
 
 Create empty game object with name for example ``Ragon Manager``, add next components:
 
-- Ragon Network
-- Ragon Entity Manager
+- **Ragon Network**
+- **Ragon Entity Manager**
 
 ![network-component](/img/network-component.png)
 
@@ -58,14 +58,9 @@ public class GameManager : MonoBehaviour, IRagonListener
     Debug.Log("On Left " + player.Name);
   }
 
-  public void OnOwnerShipChanged(RagonPlayer player)
+  public void OnOwnershipChanged(RagonPlayer player)
   {
     Debug.Log("New room owner " + player.Name);
-  }
-
-  public void OnEvent(RagonPlayer player, ushort evntCode, RagonSerializer payload)
-  {
-    Debug.Log("Event " + evntCode);
   }
 
   public void OnLevel(string sceneName)
@@ -188,7 +183,7 @@ public class GameManager : MonoBehaviour, IRagonListener
     Debug.Log("On Left " + player.Name);
   }
 
-  public void OnOwnerShipChanged(RagonPlayer player)
+  public void OnOwnershipChanged(RagonPlayer player)
   {
     Debug.Log("New room owner " + player.Name);
   }

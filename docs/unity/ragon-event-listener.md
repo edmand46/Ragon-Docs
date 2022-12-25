@@ -83,7 +83,7 @@ public void OnPlayerLeft(RagonPlayer player)
 
 New player become owner of room
 ```cs showLineNumbers
-public void OnOwnerShipChanged(RagonPlayer player)
+public void OnOwnershipChanged(RagonPlayer player)
 {
   Debug.Log("New room owner " + player.Name);
 }
