@@ -60,20 +60,13 @@ public class Player : RagonBehaviour
 ```
 
 ### Defining player prefab
-Define our player prefab in **Game Manager** created in previeus step:
+Define our player prefab in **Game Manager** created in previous step:
 ```cs 
 public class GameManager : MonoBehaviour, IRagonListener
 {
   [SerializeField] private GameObject PlayerPrefab; 
 ```
 
-### Prefab Registry
-
-Ragon uses for mapping prefabs with they are network id Prefaby Registry
-
-Create **RagonPrefabRegistry** in **Resources**:
-
-![](/img/prefab-registry.png)
 
 Edit **Start** method at **Game Manager** script, add code for spawn our player
 ```cs
@@ -86,14 +79,20 @@ public void OnJoined()
 
 ### Play
 
+:::tip
+Don't forget to turn on in **Project Build Settings**
+* Run in Background
+* Fullscreen Mode to **Windowed**
+:::
+
 Open Ragon Tools windows:
 
-![ragon-tools-popup](/img/ragon-tools-popup.png)
+![ragon-tools-popup](/images/ragon-tools-popup.png)
 
-Set Build true and Players count 2
+Set checkbox **Build** true and **Players** count 2
 
 ![ragon-tools](/img/ragon-tools.png)
 
-And press **Play Only Clients**, it should build and open two clients like on gif below:
+And press **Play Only Clients**, and it should build and open two clients like on the gif below:
 
 ![ragon-play](/img/ragon-play.gif)

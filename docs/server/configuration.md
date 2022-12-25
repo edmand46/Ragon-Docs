@@ -18,7 +18,7 @@ sidebar_position: 1
 ```csharp showLineNumbers
 {
   "serverKey": "defaultkey",
-  "serverType": "websocket",
+  "serverType": "udp",
   "serverTickRate": 20,
   "gameProtocol": "1.0.0",
   "port": 5000,

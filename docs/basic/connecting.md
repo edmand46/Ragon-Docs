@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Connect to server
+# Connect to Relay Server
 
 ### Setup scene
 
@@ -31,6 +31,14 @@ Configuration has several fields
 Set configuration at **Ragon Network**
 
 <img src="/images/network-component.png"></img>
+
+### Prefab Registry
+
+Ragon uses for mapping prefabs with they are network id in prefab registry
+
+Create registry with name **RagonPrefabRegistry** in folder **Resources**:
+
+![](/img/prefab-registry.png)
 
 ### Connect to lobby
 
@@ -110,7 +118,7 @@ would we like the name:
 ```cs
 public void OnConnected()
 {
-  Debug.Log("Authorizing...");
+  Debug.Log("Connected!");
   var randomName = $"Player {Random.Range(100, 999)}";
   RagonNetwork.Session.AuthorizeWithKey("defaultkey", randomName, Array.Empty<byte>());
 }
@@ -121,7 +129,7 @@ The next step is create or join to room, where specify the minimal amount of pla
 ```cs
 public void OnAuthorized(string playerId, string playerName)
 {
-  Debug.Log("Authorized");
+  Debug.Log("Authorized!");
   RagonNetwork.Session.CreateOrJoin("Example", 1, 20);
 }
 ```
