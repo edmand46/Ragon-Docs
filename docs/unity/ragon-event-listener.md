@@ -12,8 +12,11 @@ public class GameNetwork : MonoBehaviour, IRagonListener
 {
    private void Start()
    {
-       RagonNetwork.AddListener(this);
-       RagonNetwork.Connect("127.0.0.1", 4444);   
+      var entityManager = GetComponent<RagonEntityManager>(); 
+  
+      RagonNetwork.AddListener(this);
+      RagonNetwork.SetManager(entityManager);
+      RagonNetwork.Connect();
    }
 }
 ```
@@ -34,7 +37,7 @@ public void OnDisconnected()
 }
 ```
 
-Authorized on Relay Server, received server assigned **playerId** and **playerName**, and we can join/create room. 
+Authorized on Relay Server, received server assigned **playerId** and **playerName**, and we can join/create room in lobby.  
 ```cs showLineNumbers
 public void OnAuthorized(string playerId, string playerName)
 {
