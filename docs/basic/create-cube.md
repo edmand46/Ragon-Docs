@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Spawn Object
+# Create Network Object
 
 In this guide we will spawn cube and synchronize position of cube by network
 

@@ -2,14 +2,35 @@
 sidebar_position: 2
 ---
 
-# Connecting
+# Connect to server
+
+### Setup scene
 
 Create empty game object with name for example ``Ragon Manager``, add next components:
 
 - **Ragon Network**
 - **Ragon Entity Manager**
 
-![network-component](/img/network-component.png)
+Create ```Ragon Connection Configuration```:
+
+<img src="/images/connection-configuration.png"></img>
+
+### Ragon Configuration:
+
+Configuration has several fields
+
+- **Type** - Type of connection (UDP|WebSocket)
+- **Address** - Address your Ragon Relay Server
+- **Protocol** - Protocol version of your game
+- **Port** - Port your Ragon Relay Server
+- **Fallback** - Fallback configuration on failed connection to current
+
+**Example**: 
+<img src="/images/udp-configuration.png"></img>
+
+Set configuration at **Ragon Network**
+
+<img src="/images/network-component.png"></img>
 
 ### Connect to lobby
 
@@ -70,11 +91,6 @@ public class GameManager : MonoBehaviour, IRagonListener
 }
 ```
 
-Create connection configration
-
-
-
-
 In ```Start``` method we attach RagonEntityManager and connect to server
 
 ```cs
@@ -88,7 +104,9 @@ private void Start()
 }
 ```
 
-After we was connected will be called ```OnConnected``` in this place we should request authorization with a key and would we like the name:
+After we was connected will be called ```OnConnected``` in this place we should request authorization with a key and
+would we like the name:
+
 ```cs
 public void OnConnected()
 {
@@ -97,6 +115,7 @@ public void OnConnected()
   RagonNetwork.Session.AuthorizeWithKey("defaultkey", randomName, Array.Empty<byte>());
 }
 ```
+
 The next step is create or join to room, where specify the minimal amount of players, maximum and also map:
 
 ```cs
@@ -108,6 +127,7 @@ public void OnAuthorized(string playerId, string playerName)
 ```
 
 The last step, we should tell the server what is ready to receive updates for this map:
+
 ```cs
 public void OnLevel(string sceneName)
 {
@@ -127,6 +147,7 @@ And press Play, after you should see next logs
 Success! You connected to **Ragon Relay Server** and authorized!
 
 #### Completed sources:
+
 ```cs showLineNumbers
 [RequireComponent(typeof(RagonEntityManager))]
 public class GameManager : MonoBehaviour, IRagonListener

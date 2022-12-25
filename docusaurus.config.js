@@ -10,9 +10,7 @@ const config = {
     tagline: 'Network solution for Unity',
     url: 'https://ragon-server.com',
     baseUrl: '/',
-    markdown: {
-        mermaid: true,
-    },
+    markdown: { mermaid: true, },
     themes: ['@docusaurus/theme-mermaid'],
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -26,6 +24,7 @@ const config = {
     stylesheets: [{
         href: "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
     }],
+    plugins: [],
     presets: [
         [
             'classic',
@@ -53,6 +52,16 @@ const config = {
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            zoom: {
+                selector: '.markdown :not(em) > img',
+                config: {
+                    // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+                    background: {
+                        light: 'rgb(255, 255, 255)',
+                        dark: 'rgb(50, 50, 50)'
+                    }
+                }
+            },
             navbar: {
                 title: 'Ragon',
                 logo: {
