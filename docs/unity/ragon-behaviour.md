@@ -10,6 +10,8 @@ It's basic class for working with Ragon Entity, inherited from MonoBehaviour cla
 
 ### Properties 
 
+cIt's state of entity, which replicated non-ordered and unreliable way 
+
 ```cs showLineNumbers
 public class Player : RagonBehaviour
 {
@@ -21,86 +23,57 @@ public class Player : RagonBehaviour
 
 More about properties [Ragon Properties](/docs/unity/ragon-property.md).
 
-### OnCreatedEntity
+### OnAttachedEntity
 
 Called then the object is created and attached to a network, there you can write your logic and also get spawn payload
 
 ```cs
-public override void OnCreatedEntity()
+public override void OnAttachedEntity()
 {
     var characterPayload = Entity.GetSpawnPayload<CharacterPayload>(); 
     // Set properties values from payload
 }
 ```
 
-### OnDestroyedEntity
+### OnDetachedEntity
 
 Called then the object will be destroyed and detached from network, there you can write your logic and also get destroy the payload
 
 ```cs
-public override void OnCreatedEntity()
+public override void OnDetachedEntity()
 {
     var payload = Entity.GetDestroyPayload<CharacterPayload>(); 
     // Show specific destroy effects configured by payload
 }
 ```
 
-### OnEntityTick
+### OnUpdateEntity / OnLateUpdateEntity / OnFixedUpdateEntity
 
 Called only for owner of the object, so there are you can write logic for controlling state and game object
 
-```cs
-public override void OnEntityTick()
-{
-    var direction = Vector3.zero;
-
-    if (Input.GetKey(KeyCode.A))
-    {
-       direction += transform.right * 10 * Time.deltaTime;
-    }
-    else if (Input.GetKey(KeyCode.D))
-    {
-       direction -= transform.right * 10 * Time.deltaTime;
-    }
-  
-    // Feel free to change our properties
-    _position.Value = transform.position;
-     
-    transform.position += direction;
-}
-```
-
-### OnProxyTick
+### OnUpdateProxy / OnLateUpdateProxy / OnFixedUpdateProxy
 
 Called only for non owner of object, so there are you can write visual logic like interpolation of object
 
-Simple Interpolation:
 
-```cs
-public override void OnProxyTick()
-{
-    transform.position = Vector3.Lerp(transform.position, _position.Value, Time.deltaTime * 5);
-}
-```
+### Example 
 
-### Completed Example
+Simple position synchronization with linear interpolation:
 ```cs showLineNumbers
 public class Player : RagonBehaviour
 {
-    [SerializeField] private RagonString _name = new RagonString("");
-    [SerializeField] private RagonFloat _health = new RagonFloat(0.0f);
-    [SerializeField] private RagonVector3 _position = new(Vector3.zero, RagonAxis.XZ);
+    [SerializeField] private RagonVector3 _position = new(Vector3.zero);
   
-    public override void OnCreatedEntity()
+    public override void OnAttachedEntity()
     {
     }
 
-    public override void OnDestroyedEntity()
+    public override void OnDetachedEntity()
     {
     
     }
 
-    public override void OnEntityTick()
+    public override void OnUpdateEntity()
     { 
         var direction = Vector3.zero;
   
@@ -119,7 +92,7 @@ public class Player : RagonBehaviour
         _position.Value = transform.position;
     }
 
-    public override void OnProxyTick()
+    public override void OnUpdateProxy()
     {
         // Simple interpolation
         transform.position = Vector3.Lerp(transform.position, _position.Value, Time.deltaTime * 5);

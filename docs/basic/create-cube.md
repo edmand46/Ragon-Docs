@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Basic
+# Spawn Object
 
 In this guide we will spawn cube and synchronize position of cube by network
 
@@ -25,12 +25,12 @@ public class Player : RagonBehaviour
   [SerializeField] private RagonVector3 _position = new(Vector3.zero);
   [SerializeField] private RagonFloat _rotation = new(0.0f);
     
-  public override void OnCreatedEntity()
+  public override void OnAttachedEntity()
   {
 
   }
     
-  public override void OnEntityTick()
+  public override void OnUpdateEntity()
   {
     var direction = Vector3.zero;
     var rotation = transform.rotation.eulerAngles.y;
@@ -51,7 +51,7 @@ public class Player : RagonBehaviour
     transform.position += direction;
   }
 
-  public override void OnProxyTick()
+  public override void OnUpdateProxy()
   {
     transform.position = Vector3.Lerp(transform.position, _position.Value, Time.deltaTime * 5);
     transform.rotation = Quaternion.Euler(0, _rotation.Value, 0);
@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour, IRagonListener
 
 Ragon uses for mapping prefabs with they are network id Prefaby Registry
 
-Create **Ragon Prefab Registry** in **Resources**:
+Create **RagonPrefabRegistry** in **Resources**:
 
 ![](/img/prefab-registry.png)
 

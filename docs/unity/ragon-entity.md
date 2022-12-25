@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Ragon Entity
 
-и по### Description 
+### Description 
 Basic component for all game objects, responsible for state and event replication.
 
 Ragon Entity can be of two types:
