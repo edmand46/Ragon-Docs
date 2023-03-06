@@ -2,9 +2,7 @@
 sidebar_position: 2
 ---
 
-# Basic setup
-
-### Unity Client SDK
+# Add Unity SDK
 
 Client libraries and tools for building multiplayer games on Unity.
 

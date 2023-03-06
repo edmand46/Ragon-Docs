@@ -2,34 +2,7 @@
 sidebar_position: 2
 ---
 
-# Basic setup
-
-### Unity Client SDK
-
-Client libraries and tools for building multiplayer games on Unity.
-
-You can install Ragon Unity SDK in two ways:
-
-#### Package
-
-Ragon Unity SDK package can be downloaded from releases from Github by the link below.
-
-- [Downloads](https://github.com/edmand46/Ragon-Unity-SDK/releases)
-
-
-#### Unity Package Manager
-
-Open Unity Package Manager, press "+", press on "Add package from git URL"
-
-![img.png](/img/upm_git_url.png)
-
-and past next line:
-
-```
-https://github.com/edmand46/Ragon-Unity-SDK.git
-```
-
-### Setup scene
+# Connect 
 
 Create empty game object with name for example ``Ragon Network``, add next components:
 
@@ -135,11 +108,8 @@ In ```Start``` method we attach RagonEntityManager and connect to server
 
 ```cs
 private void Start()
-{
-  var entityManager = GetComponent<RagonEntityManager>(); 
-  
+{  
   RagonNetwork.AddListener(this);
-  RagonNetwork.SetManager(entityManager);
   RagonNetwork.Connect();
 }
 ```
@@ -148,7 +118,7 @@ After we was connected will be called ```OnConnected``` in this place we should 
 would we like the name:
 
 ```cs
-public void OnConnected()
+public void OnConnected(RagonClient client)
 {
   Debug.Log("Connected!");
   var randomName = $"Player {Random.Range(100, 999)}";
@@ -159,7 +129,7 @@ public void OnConnected()
 The next step is create or join to room, where specify the minimal amount of players, maximum and also map:
 
 ```cs
-public void OnAuthorized(string playerId, string playerName)
+public void OnAuthorizationSuccess(RagonClient client, string playerId, string playerName)
 {
   Debug.Log("Authorized!");
   RagonNetwork.Session.CreateOrJoin("Example", 1, 20);
