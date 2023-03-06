@@ -2,14 +2,38 @@
 sidebar_position: 2
 ---
 
-# Connect to Relay Server
+# Basic setup
+
+### Unity Client SDK
+
+Client libraries and tools for building multiplayer games on Unity.
+
+You can install Ragon Unity SDK in two ways:
+
+#### Package
+
+Ragon Unity SDK package can be downloaded from releases from Github by the link below.
+
+- [Downloads](https://github.com/edmand46/Ragon-Unity-SDK/releases)
+
+
+#### Unity Package Manager
+
+Open Unity Package Manager, press "+", press on "Add package from git URL"
+
+![img.png](/img/upm_git_url.png)
+
+and past next line:
+
+```
+https://github.com/edmand46/Ragon-Unity-SDK.git
+```
 
 ### Setup scene
 
-Create empty game object with name for example ``Ragon Manager``, add next components:
+Create empty game object with name for example ``Ragon Network``, add next components:
 
 - **Ragon Network**
-- **Ragon Entity Manager**
 
 Create ```Ragon Connection Configuration```:
 
@@ -26,19 +50,27 @@ Configuration has several fields
 - **Fallback** - Fallback configuration on failed connection to current
 
 **Example**: 
+
 <img src="/images/udp-configuration.png"></img>
 
 Set configuration at **Ragon Network**
 
-<img src="/images/network-component.png"></img>
+<img src="/images/network-component-with-config.png"></img>
 
 ### Prefab Registry
 
 Ragon uses for mapping prefabs with they are network id in prefab registry
 
-Create registry with name **RagonPrefabRegistry** in folder **Resources**:
+Create registry with name ```RagonPrefabRegistry``` in folder **Resources**:
+
+**Example**:
 
 ![](/img/prefab-registry.png)
+
+Set configuration at **Ragon Network**
+
+<img src="/images/network-component-with-registry.png"></img>
+
 
 ### Connect to lobby
 
@@ -104,9 +136,6 @@ In ```Start``` method we attach RagonEntityManager and connect to server
 ```cs
 private void Start()
 {
-  var entityManager = GetComponent<RagonEntityManager>(); 
-  
-  RagonNetwork.AddListener(this);
   RagonNetwork.SetManager(entityManager);
   RagonNetwork.Connect();
 }

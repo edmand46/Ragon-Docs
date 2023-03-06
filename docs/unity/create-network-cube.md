@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Create Network Object
+# Create Network Cube
 
 In this guide we will spawn cube and synchronize position of cube by network
 
@@ -10,11 +10,11 @@ Let's begin!
 
 ### Networked prefab
 
-Every networked object must have a **Ragon Entity** component, this component contains information about the network state of the object do all replication work.
+Every networked object must have a **Ragon Link** component, this component contains information about the network state of the object do all replication work.
 
 Create **GameObject** named **Player** and add attach **Ragon Entity** component:
 
-![img.png](/images/create-player-entity.png)
+![img.png](/images/add-ragon-link.png)
 
 ### Player Behaviour
 Now we should create our component for controlling and synchronization position and rotation by the network for player objects:
@@ -22,8 +22,8 @@ Now we should create our component for controlling and synchronization position 
 ```cs showLineNumbers
 public class Player : RagonBehaviour
 {
-  [SerializeField] private RagonVector3 _position = new(Vector3.zero);
-  [SerializeField] private RagonFloat _rotation = new(0.0f);
+  [SerializeField] private RagonVector3 _position = new();
+  [SerializeField] private RagonFloat _rotation = new();
     
   public override void OnAttachedEntity()
   {

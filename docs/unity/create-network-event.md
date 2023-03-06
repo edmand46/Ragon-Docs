@@ -31,12 +31,9 @@ public class GameNetwork : MonoBehaviour, IRagonListener
 
     private void Start()
     {
-        var entityManager = GetComponent<RagonEntityManager>();
-        
         RagonNetwork.Event.Register<MyEvent>();  // Here
          
         RagonNetwork.AddListener(this);
-        RagonNetwork.SetManager(entityManager);
         RagonNetwork.Connect();
     }
 ```
@@ -46,7 +43,7 @@ public class GameNetwork : MonoBehaviour, IRagonListener
 ```cs showLineNumbers
 public override void OnAttachedEntity()
 {
-    OnEvent<MyEvent>((player, evnt) =>
+    Entity.OnEvent<MyEvent>((player, evnt) =>
     {
         Debug.Log($"{player.Name} sent MyEvent with message {evnt.Message}");
     });
@@ -59,7 +56,7 @@ public override void OnAttachedEntity()
 {
     if (Input.GetKeyDown(KeyCode.Space))
     {
-        ReplicateEvent(new MyEvent() { Message = "Test event"});
+        Entity.ReplicateEvent(new MyEvent() { Message = "Test event"});
     }
 }
 ```

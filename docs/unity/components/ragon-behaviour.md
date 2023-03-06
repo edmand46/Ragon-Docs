@@ -10,7 +10,7 @@ It's basic class for working with Ragon Entity, inherited from MonoBehaviour cla
 
 ### Properties 
 
-cIt's state of entity, which replicated non-ordered and unreliable way 
+It's state of entity, which replicated non-ordered and unreliable way 
 
 ```cs showLineNumbers
 public class Player : RagonBehaviour
@@ -21,7 +21,7 @@ public class Player : RagonBehaviour
 }
 ```
 
-More about properties [Ragon Properties](/docs/unity/ragon-property.md).
+More about properties [Ragon Properties](/docs/unity/components/ragon-property.mdproperty.md).
 
 ### OnAttachedEntity
 

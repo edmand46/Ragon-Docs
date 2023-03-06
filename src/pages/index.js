@@ -51,6 +51,24 @@ const featureList = [
         ),
     },
     {
+        title: 'Unity Client SDK',
+        icon: '&#xf233;',
+        description: (
+          <>
+              Ready to use Unity client SDK
+          </>
+        ),
+    },
+    {
+        title: 'C# Client SDK',
+        icon: '&#xf233;',
+        description: (
+          <>
+              Ready to use raw C# client SDK, for integration where you want
+          </>
+        ),
+    },
+    {
         title: '.NET Power',
         icon: '&#xf3fd;',
         description: (
