@@ -1,10 +1,20 @@
 ---
-sidebar_position: 0
+sidebar_position: 4
 ---
 
-# Ragon Event Listener
+# Listen Network Events
 
-For listening network events such as player connections, leave, etc, you should implement IRagonEventListener interface
+For listening network events such as player connections, leave, etc, you should implement IRagonListener interface, also you can implement only partial of interface:
+
+- **IRagonAuthorizationListener**
+- **IRagonConnectionListener
+- IRagonFailedListener
+- IRagonJoinListener
+- IRagonLeftListener
+- IRagonOwnerhshipChangedListener
+- IRagonPlayerJoinListener
+- IRagonPlayerLeftListener
+  
 
 #### Example setup:
 ```cs showLineNumbers
@@ -12,10 +22,7 @@ public class GameNetwork : MonoBehaviour, IRagonListener
 {
    private void Start()
    {
-      var entityManager = GetComponent<RagonEntityManager>(); 
-  
       RagonNetwork.AddListener(this);
-      RagonNetwork.SetManager(entityManager);
       RagonNetwork.Connect();
    }
 }

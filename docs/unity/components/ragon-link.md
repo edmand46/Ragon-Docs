@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Ragon Entity
+# Ragon Link
 
 ### Description 
 Basic component for all game objects, responsible for state and event replication.
