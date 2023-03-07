@@ -21,7 +21,7 @@ public class Player : RagonBehaviour
 }
 ```
 
-More about properties [Ragon Properties](/docs/unity/components/ragon-property.mdproperty.md).
+More about properties [Ragon Properties](/docs/unity/components/ragon-property.md).
 
 ### OnAttachedEntity
 

@@ -20,7 +20,7 @@ Ragon has built-in properties:
 
 **Define property** 
 
-You should define inside [RagonBehaviour](/docs/unity/ragon-behaviour)
+You should define inside [RagonBehaviour](/docs/unity/components/ragon-behaviour.md)
 
 **Example**
 ```cs showLineNumbers
