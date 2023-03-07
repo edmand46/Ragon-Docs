@@ -21,9 +21,7 @@ const config = {
         defaultLocale: 'en',
         locales: ['en'],
     },
-    stylesheets: [{
-        href: "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
-    }],
+    stylesheets: [],
     plugins: [],
     presets: [
         [

@@ -4,8 +4,12 @@
  * work well for content-centric websites.
  */
 
+@import '~@fontsource/rubik';
+
 /* You can override the default Infima variables here. */
 :root {
+  font-family: 'Rubik', sans-serif;
+
   --ifm-color-primary: #6a82dc;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
