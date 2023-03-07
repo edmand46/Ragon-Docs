@@ -8,28 +8,27 @@ In this guide we will spawn cube and synchronize position of cube by network
 
 Let's begin!
 
-### Networked prefab
+## Networked prefab
 
 Every networked object must have a **Ragon Link** component, this component contains information about the network state of the object do all replication work.
 
-Create **GameObject** named **Player** and add attach **Ragon Entity** component:
+### Ragon Link
+Create **GameObject** named for example **Player** and add **Ragon Link** component:
 
 ![img.png](/images/add-ragon-link.png)
 
+### Ragon Transform Component
+
+To replicate the position we will use the **Ragon Transform Component**, add it to our player object, set **Target** and also set the switch to synchronize the position
+
+![img.png](/images/add-ragon-transform.png)
+
 ### Player Behaviour
-Now we should create our component for controlling and synchronization position and rotation by the network for player objects:
+Now we should create our component for controlling:
 
 ```cs showLineNumbers
 public class Player : RagonBehaviour
 {
-  [SerializeField] private RagonVector3 _position = new();
-  [SerializeField] private RagonFloat _rotation = new();
-    
-  public override void OnAttachedEntity()
-  {
-
-  }
-    
   public override void OnUpdateEntity()
   {
     var direction = Vector3.zero;
@@ -43,32 +42,22 @@ public class Player : RagonBehaviour
     {
       direction -= transform.right * 10 * Time.deltaTime;
     }
-  
-    _position.Value = transform.position;
-    _rotation.Value = transform.rotation.eulerAngles.y;
-      
+
     transform.rotation = Quaternion.Euler(0, rotation, 0);
     transform.position += direction;
-  }
-
-  public override void OnUpdateProxy()
-  {
-    transform.position = Vector3.Lerp(transform.position, _position.Value, Time.deltaTime * 5);
-    transform.rotation = Quaternion.Euler(0, _rotation.Value, 0);
   }
 }
 ```
 
 ### Defining player prefab
-Define our player prefab in **Game Manager** created in previous step:
+Define our player prefab in **Game Network** created in previous step:
 ```cs 
-public class GameManager : MonoBehaviour, IRagonListener
+public class GameNetwork : MonoBehaviour, IRagonListener
 {
   [SerializeField] private GameObject PlayerPrefab; 
 ```
 
-
-Edit **Start** method at **Game Manager** script, add code for spawn our player
+Edit **OnJoined** method at **Game Network** script, add code for spawn our player
 ```cs
 public void OnJoined()
 {

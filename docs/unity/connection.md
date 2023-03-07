@@ -4,72 +4,94 @@ sidebar_position: 2
 
 # Connection
 
-### Connect to lobby
+### Connect to a relay server
 
 To connect to a server, we need to create a component that will call the Ragon Network API
 
 Create script ``Game Network`` and implement Ragon interface ```IRagonListener``` :
 
 ```cs showLineNumbers
-public class Game Network: MonoBehaviour, IRagonListener
+using System;
+using Ragon.Client;
+using Ragon.Client.Unity;
+using UnityEngine;
+using Random = UnityEngine.Random;
+
+public class GameNetwork : MonoBehaviour, IRagonListener
 {
-  public void OnConnected()
-  {
-    Debug.Log("Connected");
+  private void Start()
+  { 
+    RagonNetwork.AddListener(this);
+    RagonNetwork.Connect();
   }
-    
-  public void OnAuthorized(string playerId, string playerName)
+
+  public void OnAuthorizationSuccess(RagonClient client, string playerId, string playerName)
   {
     Debug.Log("Authorized");
+    RagonNetwork.Session.CreateOrJoin("Example", 1, 20);
   }
+
+  public void OnAuthorizationFailed(RagonClient client, string message)
+  {
+    Debug.Log("Unauthorized");
+  }
+
+  public void OnConnected(RagonClient client)
+  {
+    Debug.Log("Connected");
     
-  public void OnJoined()
-  {
-    Debug.Log("Joined");
+    var randomName = $"Player {Random.Range(100, 999)}";
+    RagonNetwork.Session.AuthorizeWithKey("defaultkey", randomName, Array.Empty<byte>());
   }
 
-  public void OnFailed(string message)
-  {
-    Debug.LogError("Failed with " + message);
-  }
-
-  public void OnLeaved()
-  {
-    Debug.Log("Leaved");
-  }
-
-  public void OnDisconnected()
+  public void OnDisconnected(RagonClient client)
   {
     Debug.Log("Disconnected");
   }
 
-  public void OnPlayerJoined(RagonPlayer player)
+  public void OnFailed(RagonClient client, string message)
   {
-    Debug.Log("On Joined " + player.Name);
+    Debug.Log("Failed");
   }
 
-  public void OnPlayerLeft(RagonPlayer player)
+  public void OnJoined(RagonClient client)
   {
-    Debug.Log("On Left " + player.Name);
+    Debug.Log("Joined");
   }
 
-  public void OnOwnershipChanged(RagonPlayer player)
+  public void OnLeft(RagonClient client)
   {
-    Debug.Log("New room owner " + player.Name);
+    Debug.Log("Left");
   }
 
-  public void OnLevel(string sceneName)
+  public void OnLevel(RagonClient client, string sceneName)
   {
-    Debug.Log("Level " + sceneName);
+    Debug.Log($"Level: {sceneName}");
+    RagonNetwork.Room.SceneLoaded();
+  }
+
+  public void OnOwnershipChanged(RagonClient client, RagonPlayer player)
+  {
+    Debug.Log($"Room ownership changed");
+  }
+
+  public void OnPlayerJoined(RagonClient client, RagonPlayer player)
+  {
+    Debug.Log($"Player joined");
+  }
+
+  public void OnPlayerLeft(RagonClient client, RagonPlayer player)
+  {
+    Debug.Log($"Player left");
   }
 }
 ```
 
-In ```Start``` method we attach RagonEntityManager and connect to server
+In ```Start``` method we connect to server
 
 ```cs
 private void Start()
-{  
+{ 
   RagonNetwork.AddListener(this);
   RagonNetwork.Connect();
 }
@@ -92,27 +114,33 @@ The next step is create or join to room, where specify the minimal amount of pla
 ```cs
 public void OnAuthorizationSuccess(RagonClient client, string playerId, string playerName)
 {
-  Debug.Log("Authorized!");
-  RagonNetwork.Session.CreateOrJoin("Example", 1, 20);
+    Debug.Log("Authorized");
+    RagonNetwork.Session.CreateOrJoin("Example", 1, 20);
 }
 ```
 
 The last step, we should tell the server what is ready to receive updates for this map:
 
 ```cs
-public void OnLevel(string sceneName)
+public void OnLevel(RagonClient client, string sceneName)
 {
-  Debug.Log("Level " + sceneName);
+  Debug.Log($"Level: {sceneName}");
   RagonNetwork.Room.SceneLoaded();
 }
 ```
 
 Now drag and drop GameManager on GameObject on the scene:
 
-![img.png](/img/ragon-manager.png)
+![img.png](/images/game-network.png)
 
 And press Play, after you should see next logs
 
-![network-logs](/img/network-logs.png)
+**Client Logs**:
+
+![network-logs](/images/client-logs.png)
+
+**Server Logs**:
+
+![network-logs](/images/server-logs.png)
 
 Success! You connected to **Ragon Relay Server** and authorized!

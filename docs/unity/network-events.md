@@ -2,18 +2,18 @@
 sidebar_position: 4
 ---
 
-# Listen Network Events
+# Network Events
 
 For listening network events such as player connections, leave, etc, you should implement IRagonListener interface, also you can implement only partial of interface:
 
 - **IRagonAuthorizationListener**
-- **IRagonConnectionListener
-- IRagonFailedListener
-- IRagonJoinListener
-- IRagonLeftListener
-- IRagonOwnerhshipChangedListener
-- IRagonPlayerJoinListener
-- IRagonPlayerLeftListener
+- **IRagonConnectionListener**
+- **IRagonFailedListener**
+- **IRagonJoinListener**
+- **IRagonLeftListener**
+- **IRagonOwnerhshipChangedListener**
+- **IRagonPlayerJoinListener**
+- **IRagonPlayerLeftListener**
   
 
 #### Example setup:
