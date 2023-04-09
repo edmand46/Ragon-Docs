@@ -22,4 +22,4 @@ High-level open-source free solutions:
 * High infrastructure costs
 
 I wanted a solution that would allow me to develop games quickly and easily, and scale without spending more money and time.
-So this solution - Ragon it's a very simple network engine free and open source, which will be enough for most games, with the possibility to extend server logic for what you want network solution for unity
+So this solution - Ragon it's a network engine free and open source, which will be enough for most games, with the possibility to extend server logic for what you want network solution for unity
