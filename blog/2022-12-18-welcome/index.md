@@ -1,25 +1,23 @@
 ---
-slug: welcome
-title: Meet the Ragon!
+slug: update
+title: Update Ragon v1.2.0!
 authors: [ed]
 tags: [ragon]
 ---
 
-Motivation
-When I researched the market for available game networking solutions for unity are limited to the following options
+After much refactoring, was made rollback and now functionality is gradually restored, in version 1.2.0 returned the functionality of the extension plugins
 
-Paid closed-loop solutions:
-* Proven
-* Supported
-* Expensive
-* Vendor lock
+Ragon v1.1.0
+- Effective data compression
+- New faster serialization
+- Rewritten client SDK from scratch and split into two modules C# SDK and Unity SDK
+- New C# SDK allows integration with other game engines which also use C# language, or integration with Unity itself into its own architecture
+- C# SDK is completely free from the monoblock and Unity lifecycle
+- New Unity SDK superstructure over the C# SDK, with improved integration for unity and out-of-the-box components
+- First off-the-shelf components, for synchronizing positions and animations
+- Modifiable transport layer (ENet, LNL, KCP, WS)
+- Modify logging
 
-High-level open-source free solutions:
-* Free
-* Community
-* Support
-* A lot of headaches with deploying infrastructure to release the game
-* High infrastructure costs
-
-I wanted a solution that would allow me to develop games quickly and easily, and scale without spending more money and time.
-So this solution - Ragon it's a very simple network engine free and open source, which will be enough for most games, with the possibility to extend server logic for what you want network solution for unity
+Ragon v1.2.0:
+- Added plugin system to extend Ragon.Relay Server
+- Added web hooks for basic operations and authorization
