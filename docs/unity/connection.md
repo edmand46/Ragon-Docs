@@ -8,7 +8,7 @@ sidebar_position: 2
 
 To connect to a server, we need to create a component that will call the Ragon Network API
 
-Create script ``Game Network`` and implement interface ```IRagonListener``` :
+Create script ``Game Network`` and implement interface ```IRagonListener``` ([more about IRagonListener](network-events.md)):
 
 In ```Start``` method we connect to server
 

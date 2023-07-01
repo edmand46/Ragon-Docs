@@ -31,6 +31,7 @@ First, start our server locally, unzip, and launch the executable depends on you
 - **Limit Connections** - Limit Connections
 - **Limit Players Per Room** - Limit Players Per Room
 - **Limit Rooms** - Limit Rooms
+- **Limit Buffered Events** - Limit Buffered Evented Per Entity
 
 :::info Take care
 For security reasons, be sure to change the ```serverKey``` in the production

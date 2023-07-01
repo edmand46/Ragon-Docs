@@ -42,11 +42,11 @@ _health.Changed += () => healhBar.SetHealth(_healh.Value)
 public class Player : RagonBehaviour
 {
     [SerializeField] private RagonString _name = new RagonString();
-    [SerializeField] private RagonFloat _health = new RagonFloat();
+    [SerializeField] private RagonFloat _health = new RagonFloat(true);
     
     public override void OnAttachedEntity()
     {
-        _health.OnChanged += () => 
+        _health.Changed += () => 
         {
             // update healthbar for example 
         } 

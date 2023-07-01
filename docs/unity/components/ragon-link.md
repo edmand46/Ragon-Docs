@@ -5,7 +5,7 @@ sidebar_position: 1
 # Ragon Link
 
 ### Description 
-Basic component for all game objects, responsible for state and event replication.
+Basic component for all game objects, responsible Linking GameObject with Ragon Entity.
 
 Ragon Entity can be of two types:
 * Dynamic - Created in realtime during game
